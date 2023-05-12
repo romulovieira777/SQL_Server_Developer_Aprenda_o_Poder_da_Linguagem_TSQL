@@ -1,0 +1,14 @@
+SQL Sever Management Studio
+https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+
+SQL Server 2017
+https://www.microsoft.com/pt-br/evalcenter/evaluate-sql-server-2017-rtm
+
+
+Windows Server 2012 R2
+https://www.microsoft.com/pt-br/evalcenter/evaluate-windows-server-2012-r2
+
+
+VMware
+https://customerconnect.vmware.com/en/downloads/#all_products
