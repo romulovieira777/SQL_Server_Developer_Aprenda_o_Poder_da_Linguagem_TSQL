@@ -12,3 +12,4 @@ https://www.microsoft.com/pt-br/evalcenter/evaluate-windows-server-2012-r2
 
 VMware
 https://customerconnect.vmware.com/en/downloads/#all_products
+
