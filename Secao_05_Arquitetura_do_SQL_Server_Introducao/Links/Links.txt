@@ -1,0 +1,2 @@
+Configuração de rede do servidor
+https://learn.microsoft.com/pt-br/previous-versions/sql/sql-server-2008-r2/ms189083(v=sql.105)?redirectedfrom=MSDN
