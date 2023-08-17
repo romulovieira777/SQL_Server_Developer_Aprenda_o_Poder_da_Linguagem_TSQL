@@ -1,0 +1,170 @@
+Tarefas - Comandos DML
+Com base nas tabelas do banco de dados FundamentosTSQL, vamos começar a praticar alguns conceitos que foram apresentados nas aulas desta seção e também propor desafios para você.
+
+As tarefas que apresentaremos, terá um texto explicativo é o um resultado esperado. Você terá que construir a instrução (ou as instruções) e obter o mesmo resultado com a sua execução.
+
+Lembre-se sempre que para uma tarefa, poderá haver várias respostas, algumas eficientes quanto ao desempenho e outras nem tanto. Uma com código simples e pequeno, já outra com códigos mais complexos.
+
+O que buscamos neste momento é atingir o objetivo de apresentar o resultado. Somente com o tempo, práticas e aprendizado você conseguirá atingir códigos eficientes e simples.
+
+As respostas serão apresentadas na próximo aula.
+
+Média aritmética.
+
+1. Nas aulas dessa seção, vimos que somente com a instrução SELECT, é possivel realizarmos operações matemáticas simples e em alguns casos, e com o auxilio de outros comandos, algo mais complexo.
+
+O seu desafio é: Com base nos 6 números apresentados abaixo, desenvolva uma instrução SELECT que apresente a média aritmética conforme resultado abaixo:
+
+/*
+Com base nos números abaixo:
+1,2,5,6,7,9
+Calcular a média aritmética 
+*/
+ 
+Média
+---------------------------------------
+5.000000
+Endereço Completo
+
+2. Em certos processos de negócios, precisamos capturar o endereço de clientes e fornecedores para compor documentos como nota fiscal, por exemplo.
+
+Esse desafio consiste em você concatenar as informações separadas de um endereço contidas entre aspas simples abaixo e apresentar em uma única informação conforme o resultado esperado.
+
+/*
+Informações de um endereço:
+'Rua'
+'Conselheiro Furtado'
+'No. 897'
+'Ap 50 - Bloco A'
+'Santa Efigênia'
+'Capital'
+'São Paulo'
+'Cep: 01001-001'
+ 
+Apresente os dados em um única informação.
+ 
+*/
+ 
+ 
+Endereço
+------------------------------------------------------------------------------------------------------
+Rua Conselheiro Furtado, No. 897, Ap 50 - Bloco A - Santa Efigênia - Capital São Paulo- Cep: 01001-001
+Obs: Se você conseguir apresentar os dados de endereço, sem alterar os conteúdos dos valores originais entre aspas simples, você já apresenta um bom entendimento de concatenação.
+
+Conhecendo os Fornecedores e os Produtos.
+
+As próximas tarefas, vamos manipular dados a partir da tabela FORNECEDOR e PRODUTO dentro do esquema PRODUCAO.
+
+3. Dados de fornecedores são importantes para a área de compras de um empresa, para realizar os pedidos de produtos. Monte uma instrução SELECT a partir da tabela FORNECEDOR e recupere os dados que permitem realizar a comunicação com os fornecedores. Veja o resultado esperado.
+
+Contato                        Telefone
+------------------------------ ------------------------
+Adolphi, Stephan               (171) 456-7890
+Hance, Jim                     (100) 555-0111
+Parovszky, Alfons              (313) 555-0109
+...
+Leoni, Alessandro              89.01.23.45
+Teper, Jeff                    01.23.45.67
+Walters, Rob                   (514) 567-890
+ 
+(29 rows affected)
+Obs: Os três pontos no meio do resultado significa que existem mais linhas entre as 3 linhas iniciais e as 3 linhas finais. Veja que o total de linhas apresentadas são 29.
+
+4. Agora a empresa deseja enviar formalmente para os fornecedores, os modelos de produtos que eles devem entregar. Para isso a empresa deve enviar somente para os contatos dos fornecedores com o cargo Sales Representative (Representante de vendas). Para realizar esse envio, a empresa precisa de uma relação com o nome do contato e o endereço completo, conforme apresentado no resultado abaixo.
+
+Destinatario                   Endereco
+------------------------------ --------------------------------------------------------------------------------------------------------------
+Parovszky, Alfons              1234 Oxford Rd., Ann Arbor USA - CEP:10026
+Iallo, Lucio                   9012 King's Way, Manchester UK - CEP:10021
+Keil, Kendall                  Viale Dante, 6789, Ravenna Italy - CEP:10015
+Kleinerman, Christian          Brovallavägen 0123, Stockholm Sweden - CEP:10033
+Clark, Molly                   6789 Prince Edward Parade Hunter's Hill, Sydney Australia - CEP:10030
+Teper, Jeff                    Bat. B 2345, rue des Alpes, Annecy France - CEP:10010
+ 
+(6 rows affected)
+5. A empresa mantém contatos com vários fornecedores. Principalmente com os fornecedores do velho continente. Agora você precisa gerar um relatório para reunião da diretoria, a relação de fornecedores da Germany e France (Alemanha e França). A apresentação do relatório deve ser igual ao resultado abaixo.
+
+RazaoSocial                              Contato                        Pais            Telefone
+---------------------------------------- ------------------------------ --------------- ------------------------
+Supplier ZPYVS                           Jain, Mukesh                   Germany         (010) 3456789
+Supplier SVIYA                           Regev, Barak                   Germany         (069) 234567
+Supplier TEGSC                           Brehm, Peter                   Germany         (04721) 1234
+Supplier LVJUA                           Canel, Fabrice                 France          (1) 90.12.34.56
+Supplier ZRYDZ                           Leoni, Alessandro              France          89.01.23.45
+Supplier OAVQT                           Teper, Jeff                    France          01.23.45.67
+ 
+(6 rows affected)
+6. A área de compras da empresa precisa saber a relação de Produtos do fornecedor Supplier VHQZD. Você deve montar um relação que apresente o nome dos produtos ativos, o preço atual do produto e o preço com 10% de desconto, conforme a listagem abaixo.
+
+NomeProduto                              PrecoUnitario         PrecoDesconto
+---------------------------------------- --------------------- ---------------------------------------
+Product KSBRM                            22,00                 19.800000
+Product XYWBZ                            21,05                 18.945000
+Product LQMGN                            17,00                 15.300000
+ 
+(3 rows affected)
+7. Agora a empresa precisa cadastrar um novo Fornecedor. E para esse fornecedor, você terá que cadastrar um novo Produto. Abaixo segue os dados do Fornecedor:
+
+RazaoSocial                              Contato                        Cargo                          Endereco                                                     Cidade          Regiao          CEP        Pais            Telefone                 fax
+---------------------------------------- ------------------------------ ------------------------------ ------------------------------------------------------------ --------------- --------------- ---------- --------------- ------------------------ ------------------------
+Supplier ABCDE                           da Silva, Jose                 Purchasing Manager             01 Avenue Paulista                                           São Paulo       São Paulo       1000       BR              (11) 2788-0001           NULL
+ 
+E os dados de Produto:
+
+NomeProduto     iIDFornecedor iIDCategoria PrecoUnitario         Desativado
+--------------- ------------- ------------ --------------------- ----------
+Product ABCDE                 1            33,00                 0
+ 
+Veja nos dados acima de Produto, que não tem a identificação do Fornecedor. Esse dado somente existirá após a inclusão dos dados do Fornecedor.
+
+Você precisa criar os comandos de INSERT para cada um dos conjuntos de dados acima e inseri-lós na tabelas FORNECEDOR e PRODUTO respectivamente.
+
+8.  Os dados do Fornecedor e do Produto foram incluídos incorretamente. O nome do contato do fornecedor é Maria da Silva e o preço unitário do produto é R$ 23,00. 
+
+Crie os comandos UPDATE para realizar as alterações nas tabelas FORNECEDOR e PRODUTO respectivamente. No final, faça os comandos SELECT para ver os dados estão corretos.
+
+9. Por fim, a empresa decidiu excluir o fornecedor e o produto. Você terá que criar os comandos para excluir o Fornecedor e o Produto.
+
+10. Agora vamos para um desafio. Vamos utilizar a tabela PEDIDO que está no esquema VENDAS. Um desenvolvedor criou um relatório a partir da consulta abaixo e com o seguintes resultado:
+
+Select iIDPedido, 
+       DataPedido, 
+       year(DataPedido) as AnoPedido, 
+       Shipname , 
+       Shipaddress 
+From Vendas.Pedido
+GO
+ 
+Result:
+ 
+iIDPedido   DataPedido AnoPedido   Shipname                                 Shipaddress
+----------- ---------- ----------- ---------------------------------------- ------------------------------------------------------------
+10248       2006-07-04 2006        Ship to 85-B                             6789 rue de l'Abbaye
+10249       2006-07-05 2006        Ship to 79-C                             Luisenstr. 9012
+10250       2006-07-08 2006        Destination SCQXA                        Rua do Paço, 7890
+...
+11075       2008-05-06 2008        Ship to 68-A                             Starenweg 6789
+11076       2008-05-06 2008        Ship to 9-A                              8901, rue des Bouchers
+11077       2008-05-06 2008        Ship to 65-A                             7890 Milton Dr.
+ 
+(830 rows affected)
+Mas a diretoria precisa somente da relação dos pedidos realizados no ano de 2007. Voce deverá realizar a alteração na consulta acima para atender a condição de ano do pedido igual a 2007.
+
+O resultado esperado deve ser semelhantes a relação abaixo:
+
+iIDPedido   DataPedido shipname                                 shipaddress
+----------- ---------- ---------------------------------------- ------------------------------------------------------------
+10400       2007-01-01 Destination BBMRT                        4567 King George
+10401       2007-01-01 Ship to 65-A                             7890 Milton Dr.
+10402       2007-01-02 Destination FFXKT                        Kirchgasse 0123
+...
+10805       2007-12-30 Ship to 77-A                             1234 Jefferson Way Suite 2
+10806       2007-12-31 Ship to 84-C                             5678, rue du Commerce
+10807       2007-12-31 Destination XNLFB                        Via Monte Bianco 5678
+ 
+(408 rows affected)
+
+
+Respostas
+
+Os resultados de cada uma das tarefas estão no próximo document
