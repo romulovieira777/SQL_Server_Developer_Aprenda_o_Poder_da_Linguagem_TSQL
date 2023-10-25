@@ -6,3 +6,4 @@
 - Seção 03 - Módulo 01 - Introdução
 - [Seção 04 - Conhecimento Teórico](https://github.com/romulovieira777/SQL_Server_Developer_Aprenda_o_Poder_da_Linguagem_TSQL/tree/main/Secao_04_Conhecimento_Teorico)
 - [Seção 05 - Arquitetura do SQL Server - Introdução](https://github.com/romulovieira777/SQL_Server_Developer_Aprenda_o_Poder_da_Linguagem_TSQL/tree/main/Secao_05_Arquitetura_do_SQL_Server_Introducao)
+- [Seção 06 - Criando Tabelas e suas Integridades]()
